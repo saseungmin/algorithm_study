@@ -1,25 +1,35 @@
+// function solution(words) {
+//   // for (let i = 0; i < words.length; i++) {
+//   //   if (!arr.includes(words[i])) {
+//   //     arr.push(words[i]);
+//   //   }
+//   // }
+
+//   // words.forEach((word) => {
+//   //   if (!arr.includes(word)) {
+//   //     arr.push(word);
+//   //   }
+//   // });
+
+//   return words.reduce((pre, cur) => {
+//     if (!pre.includes(cur)) {
+//       return [...pre, cur];
+//     }
+
+//     return pre;
+//   }, []);
+
+//   // return arr;
+// }
+
 function solution(words) {
-  // for (let i = 0; i < words.length; i++) {
-  //   if (!arr.includes(words[i])) {
-  //     arr.push(words[i]);
-  //   }
-  // }
+  const set = new Set();
 
-  // words.forEach((word) => {
-  //   if (!arr.includes(word)) {
-  //     arr.push(word);
-  //   }
-  // });
+  words.forEach((word) => {
+    set.add(word);
+  });
 
-  return words.reduce((pre, cur) => {
-    if (!pre.includes(cur)) {
-      return [...pre, cur];
-    }
-
-    return pre;
-  }, []);
-
-  // return arr;
+  return [...set];
 }
 
 describe('solution', () => {

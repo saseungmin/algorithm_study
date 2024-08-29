@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "jest",
-    "test:watch": "yarn run test -- --watch-all",
+    "test:watch": "yarn run test -- --watch",
     "coverage": "yarn run test -- --coverage"
   },
   "repository": {
